@@ -29,12 +29,14 @@ public class RepositoryTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+
     @Test
     public void shouldRemoveNonExistentProductById() {
         Assertions.assertThrows(NotFoundException.class, () -> {
             repo.removeById(45);
         });
     }
+
     @Test
     public void shouldAddNewProductInRepo() {
         manager.add(products4);
